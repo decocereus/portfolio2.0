@@ -12,8 +12,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Amartya Singh",
-  description: "Built with Next JS, Typescript",
+  title: "Portfolio",
+  description: "Personal Portfolio of Amartya Singh",
 };
 
 export default function RootLayout({
@@ -36,7 +36,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </body>
     </html>
