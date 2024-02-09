@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <div
           className={cn(
-            "h-full w-full flex items-center justify-center flex-col"
+            "h-full w-full flex items-center justify-center flex-col overflow-x-hidden"
           )}
         >
           <Header />

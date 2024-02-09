@@ -1,6 +1,6 @@
-import About from "@/components/About";
-import Experience from "@/components/Experience";
-import Skills from "@/components/Skills";
+import About from "@/components/about";
+import Experience from "@/components/experience";
+import Skills from "@/components/skills";
 
 export default function Home() {
   return (

@@ -5,30 +5,29 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { IconMap, SkillCardProps } from "@/lib/definitions";
+import { SkillCardProps, IconMap } from "@/lib/definitions";
 import { IoLogoJavascript } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiMongodb } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { TbBrandNextjs, TbSql } from "react-icons/tb";
-import { FaNodeJs, FaPython } from "react-icons/fa6";
-
-const iconComponents: IconMap = {
-  js: <IoLogoJavascript />,
-  ts: <BiLogoTypescript />,
-  reactjs: <FaReact />,
-  nodejs: <FaNodeJs />,
-  nextjs: <TbBrandNextjs />,
-  mysql: <TbSql />,
-  mongodb: <SiMongodb />,
-  python: <FaPython />,
-};
+import { FaPython, FaNode } from "react-icons/fa6";
 
 const SkillCard = ({ type, label }: SkillCardProps) => {
+  const iconComponents: IconMap = {
+    js: <IoLogoJavascript />,
+    ts: <BiLogoTypescript />,
+    reactjs: <FaReact />,
+    nodejs: <FaNode />,
+    nextjs: <TbBrandNextjs />,
+    mysql: <TbSql />,
+    mongodb: <SiMongodb />,
+    python: <FaPython />,
+  };
   const IconComponent = iconComponents[type];
 
   return (
-    <div className="w-[15%] sm:w-[20%] flex flex-col items-center justify-center">
+    <div className="w-full flex flex-col items-center justify-center">
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger>

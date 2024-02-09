@@ -15,11 +15,11 @@ const Skills = () => {
     Python: "python",
   };
   return (
-    <div className="w-full flex flex-col justify-between p-2 gap-4">
+    <div className="w-full md:w-[95%] flex flex-col justify-between p-2 gap-10">
       <p className="flex items-center text-muted-foreground text-md sm:text-lg my-1">
-        <BsCodeSlash className="mr-1" size={22} /> Skills
+        {"<TechStack/>"}
       </p>
-      <div className="flex flex-row flex-wrap justify-between items-center gap-10">
+      <div className="grid grid-cols-4 grid-rows-2 gap-10">
         {Object.keys(skills).map((skill) => (
           <SkillCard key={skills[skill]} type={skills[skill]} label={skill} />
         ))}

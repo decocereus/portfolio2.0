@@ -3,24 +3,32 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { GrDocumentText } from "react-icons/gr";
 import { HiOutlineMenu } from "react-icons/hi";
-import Modal from "./Modal";
+import Modal from "./modal";
+
+type NavLink = { [key: string]: string };
 
 const NavBar = () => {
-  const navItems = ["Skills", "Experience", "Projects", "About", "Github"];
-  //TODO: Add icons for menu items in burger menu mode
+  const navIconMap: NavLink = {
+    "<TechStack />": "#skills",
+    "<Experience />": "#experience",
+    "<Projects />": "#projects",
+    "<Github />": "#github",
+  };
+
   const [openModal, setOpenModal] = useState(false);
   const handleModalClose = () => setOpenModal(false);
   const addMenuItems = () => {
     return (
       <>
-        {navItems.map((item, idx) => {
+        {Object.keys(navIconMap).map((item, idx) => {
           return (
-            <h3
+            <div
               key={idx}
-              className="font-semibold text-lg cursor-pointer hover:-translate-y-1 h-[10%]"
+              className="font-base text-base cursor-pointer hover:-translate-y-1 h-[10%] hover:text-primary px-4 "
             >
+              <a href={`${navIconMap[item]}`}></a>
               {item}
-            </h3>
+            </div>
           );
         })}
       </>
@@ -29,14 +37,15 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="w-full h-full hidden md:w-[90%] md:flex md:items-center md:justify-between">
-        <div className="w-[70%] flex justify-between items-center gap-1">
+      <div className="w-full h-full hidden md:w-[90%] md:flex md:items-center md:justify-between gap-5">
+        <div className="w-[80%] flex justify-between items-center gap-1 ">
           {addMenuItems()}
         </div>
-        <div className="w-[20%]">
-          <Button variant={"default"}>
-            <GrDocumentText size={20} color="white" />
-            <span className="text-lg ml-2 text-white">Resume</span>
+        <div className="w-[20%] flex items-end justify-end">
+          <Button variant="ghost" className="text-base">
+            <span className="mr-1">{`<Resume `}</span>
+            <GrDocumentText className="mr-1" />
+            <span>{"   />"}</span>
           </Button>
         </div>
       </div>
@@ -45,6 +54,13 @@ const NavBar = () => {
         {openModal && (
           <Modal isOpen={openModal} closeModal={handleModalClose}>
             {addMenuItems()}
+            <div className="">
+              <Button variant="ghost" className="text-base">
+                <span className="mr-1">{`<Resume `}</span>
+                <GrDocumentText className="mr-1" />
+                <span>{"   />"}</span>
+              </Button>
+            </div>
           </Modal>
         )}
       </div>
