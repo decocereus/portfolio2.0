@@ -22,7 +22,7 @@ const About = () => {
         </div>
       </div>
       <div className="w-full md:w-[45%] p-1 flex items-center justify-center">
-        <Image src="/opt-3.svg" width={`${500}`} height={200} alt="image" />
+        <Image src="/opt-3.svg" width={500} height={200} alt="image" />
       </div>
     </div>
   );

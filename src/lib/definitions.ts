@@ -9,3 +9,12 @@ export interface ModalProps {
   isOpen: boolean;
   closeModal: () => void;
 }
+
+export interface SkillCardProps {
+  type: string;
+  label: string;
+}
+
+export type IconMap = {
+  [key: string]: JSX.Element;
+};

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import { Button } from "./button";
+import { Button } from "./ui/button";
 import { GrDocumentText } from "react-icons/gr";
 import { HiOutlineMenu } from "react-icons/hi";
-import Modal from "@/components/ui/Modal";
+import Modal from "./Modal";
 
 const NavBar = () => {
   const navItems = ["Skills", "Experience", "Projects", "About", "Github"];
@@ -26,6 +26,7 @@ const NavBar = () => {
       </>
     );
   };
+
   return (
     <>
       <div className="w-full h-full hidden md:w-[90%] md:flex md:items-center md:justify-between">

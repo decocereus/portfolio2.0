@@ -5,21 +5,13 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { IconMap, SkillCardProps } from "@/lib/definitions";
 import { IoLogoJavascript } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiMongodb } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { TbBrandNextjs, TbSql } from "react-icons/tb";
 import { FaNodeJs, FaPython } from "react-icons/fa6";
-
-interface SkillCardProps {
-  type: string;
-  label: string;
-}
-
-type IconMap = {
-  [key: string]: JSX.Element;
-};
 
 const iconComponents: IconMap = {
   js: <IoLogoJavascript />,
