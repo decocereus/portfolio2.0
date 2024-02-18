@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -12,8 +12,22 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Amartya Singh",
   description: "Personal Portfolio of Amartya Singh",
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/logo.png",
+        href: "/logo.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/logo.png",
+        href: "/logo.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +50,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </body>
     </html>

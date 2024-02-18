@@ -6,13 +6,13 @@ const Experience = () => {
   return (
     <section
       id="#experience"
-      className="w-full md:w-[95%] flex flex-col justify-between p-2 gap-10"
+      className="w-full md:w-[95%] flex flex-col items-center justify-between p-2 gap-10"
     >
-      <p className="flex items-center text-foreground text-md sm:text-lg my-1">
-        {"<Experience/>"}
+      <p className="w-full text-foreground text-md sm:text-lg my-1">
+        {"<Experience />"}
       </p>
       <div>
-        <ol className="group/list">
+        <ol className="group/list w-full flex flex-col items-center">
           {Object.entries(experience).map(([period, exp], idx) => {
             return (
               <ExperienceCard

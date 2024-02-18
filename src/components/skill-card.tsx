@@ -26,11 +26,11 @@ const SkillCard = ({ type, label }: SkillCardProps) => {
   const IconComponent = iconComponents[type];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center">
+    <div className="w-full flex flex-col items-center justify-center ">
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger>
-            <div className="flex flex-col gap-2 border border-solid  p-2 sm:p-6 rounded-lg cursor-pointer text-5xl sm:text-6xl md:text-8xl">
+            <div className="flex flex-col gap-2 border border-solid  p-2 sm:p-6 rounded-lg cursor-pointer text-5xl sm:text-6xl md:text-8xl bg-gradient-to-r from-input from-1% to-background to-200%">
               {IconComponent}
             </div>
           </TooltipTrigger>

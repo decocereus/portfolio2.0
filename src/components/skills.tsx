@@ -13,14 +13,13 @@ const Skills = () => {
     MonogoDB: "mongodb",
     Python: "python",
   };
-  // Gradient bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%
   return (
     <section
       id="#skills"
-      className="w-full md:w-[95%] flex flex-col justify-between px-2 py-4 gap-10"
+      className="w-full md:w-[95%] flex flex-col justify-between px-2 py-4 gap-10 mb-4"
     >
       <p className="flex items-center text-secondary-foreground text-md sm:text-lg my-1">
-        {"<TechStack/>"}
+        {"<TechStack />"}
       </p>
       <div className="grid grid-cols-4 grid-rows-2 gap-10">
         {Object.keys(skills).map((skill) => (

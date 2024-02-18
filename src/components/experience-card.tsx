@@ -37,7 +37,7 @@ const ExperienceCard = ({
                 rel="noreferrer noopener"
               >
                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                <span className="flex items-center justify-center gap-1">
+                <span className="flex items-center justify-center gap-1 sm:text-xs">
                   {`${designation} ·  `}
                   <span className="flex items-center justify-center gap-1">
                     {`${company}`} <LuArrowUpRight />
