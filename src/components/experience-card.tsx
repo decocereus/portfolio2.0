@@ -37,7 +37,7 @@ const ExperienceCard = ({
                 rel="noreferrer noopener"
               >
                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                <span className="flex items-center justify-center gap-1 sm:text-xs">
+                <span className="flex items-center justify-center gap-1 text-xs sm:text-base">
                   {`${designation} ·  `}
                   <span className="flex items-center justify-center gap-1">
                     {`${company}`} <LuArrowUpRight />
@@ -50,7 +50,7 @@ const ExperienceCard = ({
           <ul className="mt-2 flex flex-wrap">
             {tech.map((t, idx) => (
               <li key={idx} className="mr-1.5 mt-2">
-                <div className="flex items-center rounded-full bg-input px-3 py-1 text-xs font-medium leading-5 text-[#89c4f4]">
+                <div className="flex items-center rounded-full bg-input px-3 py-1 text-xs sm:text-base font-medium leading-5 text-[#89c4f4]">
                   {t}
                 </div>
               </li>
