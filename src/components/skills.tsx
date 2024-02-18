@@ -1,22 +1,25 @@
 import React from "react";
 import SkillCard from "./skill-card";
 import { Skills as SkillsType } from "@/lib/definitions";
-import { BsCodeSlash } from "react-icons/bs";
 
 const Skills = () => {
   const skills: SkillsType = {
-    Javascript: "js",
-    Typescript: "ts",
+    NextJs: "nextjs",
     ReactJs: "reactjs",
     NodeJs: "nodejs",
-    NextJs: "nextjs",
+    Typescript: "ts",
+    TailwindCSS: "tailwindcss",
     MySQL: "mysql",
     MonogoDB: "mongodb",
     Python: "python",
   };
+  // Gradient bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%
   return (
-    <div className="w-full md:w-[95%] flex flex-col justify-between p-2 gap-10">
-      <p className="flex items-center text-muted-foreground text-md sm:text-lg my-1">
+    <section
+      id="#skills"
+      className="w-full md:w-[95%] flex flex-col justify-between px-2 py-4 gap-10"
+    >
+      <p className="flex items-center text-secondary-foreground text-md sm:text-lg my-1">
         {"<TechStack/>"}
       </p>
       <div className="grid grid-cols-4 grid-rows-2 gap-10">
@@ -24,7 +27,7 @@ const Skills = () => {
           <SkillCard key={skills[skill]} type={skills[skill]} label={skill} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

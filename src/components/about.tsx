@@ -8,7 +8,7 @@ import { IconMap } from "@/lib/definitions";
 const About = () => {
   const socials: IconMap = {
     "https://www.linkedin.com/in/amartyasingh07/": <FaLinkedinIn />,
-    twiiter: <FaXTwitter />,
+    "https://twitter.com/decocereus": <FaXTwitter />,
     "https://github.com/decocereus": <FaGithub />,
   };
   const generateSocialLinks = () => {
@@ -28,7 +28,10 @@ const About = () => {
   };
 
   return (
-    <div className="w-full md:w-[95%] flex flex-col-reverse md:flex-row items-center justify-between min-h-[25em] mt-10 gap-5">
+    <section
+      id="#about"
+      className="w-full md:w-[95%] flex flex-col-reverse md:flex-row items-center justify-between min-h-[25em] mt-10 gap-5"
+    >
       <div className="w-full md:w-[65%] p-1">
         <div className="w-full py-2 px-3">
           <p className="text-md sm:text-lg md:text-xl py-1 md:pl-2 sm:pl-1 pl-1">
@@ -38,7 +41,7 @@ const About = () => {
             Amartya Singh
           </p>
           <p className="text-lg sm:text-xl md:text-2xl lg:5xl pt-2 md:pt-4">
-            I am a Full Stack Engineer proficient in React, Next.js and Node.js
+            I am a Full Stack Engineer proficient in Next.js, Node.js and Web3
           </p>
         </div>
 
@@ -60,7 +63,7 @@ const About = () => {
       <div className="w-full md:w-[35%] p-1 flex items-center justify-center">
         <Image src="/opt-3.svg" width={500} height={200} alt="image" />
       </div>
-    </div>
+    </section>
   );
 };
 

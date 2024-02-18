@@ -24,7 +24,7 @@ const NavBar = () => {
           return (
             <div
               key={idx}
-              className="font-base text-base cursor-pointer hover:-translate-y-1 h-[10%] hover:text-primary px-4 "
+              className="font-base text-sm text-muted-foreground cursor-pointer hover:border-b-[1px] hover:pb-2 h-[10%] px-4 "
             >
               <a href={`${navIconMap[item]}`}></a>
               {item}
@@ -42,7 +42,7 @@ const NavBar = () => {
           {addMenuItems()}
         </div>
         <div className="w-[20%] flex items-end justify-end">
-          <Button variant="ghost" className="text-base">
+          <Button variant="ghost" className="text-sm text-muted-foreground">
             <span className="mr-1">{`<Resume `}</span>
             <GrDocumentText className="mr-1" />
             <span>{"   />"}</span>
