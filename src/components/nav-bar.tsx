@@ -43,11 +43,17 @@ const NavBar = () => {
 
   const resumeButton = () => {
     return (
-      <Button variant="ghost" className="text-sm text-muted-foreground">
-        <span className="mr-1">{`<Resume `}</span>
-        <GrDocumentText className="mr-1" />
-        <span>{"   />"}</span>
-      </Button>
+      <a
+        href="https://drive.google.com/file/d/1-4h2TFpg1-4fqqkKHYZ4EDp8BO3wZ6yO/view?usp=sharing"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Button variant="ghost" className="text-sm text-muted-foreground">
+          <span className="mr-1">{`<Resume `}</span>
+          <GrDocumentText className="mr-1" />
+          <span>{"   />"}</span>
+        </Button>
+      </a>
     );
   };
 
