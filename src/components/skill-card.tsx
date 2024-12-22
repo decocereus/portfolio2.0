@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/tooltip";
 import { SkillCardProps, IconMap } from "@/lib/definitions";
 import { BiLogoTypescript, BiLogoTailwindCss } from "react-icons/bi";
-import { SiMongodb } from "react-icons/si";
+import { SiMongodb, SiSolidity, SiWeb3Dotjs } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { TbBrandNextjs, TbSql } from "react-icons/tb";
 import { FaPython, FaNode } from "react-icons/fa6";
@@ -22,6 +22,8 @@ const SkillCard = ({ type, label }: SkillCardProps) => {
     mysql: <TbSql />,
     mongodb: <SiMongodb />,
     python: <FaPython />,
+    solidity: <SiSolidity />,
+    web3: <SiWeb3Dotjs />,
   };
   const IconComponent = iconComponents[type];
 

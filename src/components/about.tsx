@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IconMap } from "@/lib/definitions";
+import Link from "next/link";
 
 const About = () => {
   const socials: IconMap = {
@@ -53,10 +54,10 @@ const About = () => {
 
         <div className="w-full flex flex-col gap-3 mt-3">
           <div className="w-[50%] flex gap-5">{generateSocialLinks()}</div>
-          <Button variant="ghostEmail" size="socialLinkIcon">
-            <a href="mailto:amartyasinghkings07@gmail.com" target="_blank">
+          <Button variant="ghostEmail" size="socialLinkIcon" className="w-fit">
+            <Link href="mailto:amartyasinghkings07@gmail.com" target="_blank">
               Get in touch @Amartya Singh
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

@@ -5,12 +5,12 @@ import { Skills as SkillsType } from "@/lib/definitions";
 const Skills = () => {
   const skills: SkillsType = {
     NextJs: "nextjs",
+    Web3: "web3",
+    Solidity: "solidity",
     ReactJs: "reactjs",
     NodeJs: "nodejs",
     Typescript: "ts",
     TailwindCSS: "tailwindcss",
-    MySQL: "mysql",
-    MonogoDB: "mongodb",
     Python: "python",
   };
   return (

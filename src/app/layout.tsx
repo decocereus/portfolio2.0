@@ -14,6 +14,9 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Amartya Singh",
   description: "Personal Portfolio of Amartya Singh",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       {

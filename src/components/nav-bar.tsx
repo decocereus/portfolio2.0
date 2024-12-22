@@ -28,13 +28,13 @@ const NavBar = () => {
       <>
         {Object.keys(navIconMap).map((item, idx) => {
           return (
-            <div
-              className="font-base text-sm text-muted-foreground cursor-pointer hover:border-b-[1px] hover:pb-2 h-[10%] px-1 "
+            <button
+              className="font-base text-sm text-muted-foreground cursor-pointer hover:text-white h-[10%] px-1"
               onClick={() => handleScroll(navIconMap[item])}
               key={idx}
             >
               {item}
-            </div>
+            </button>
           );
         })}
       </>
@@ -59,7 +59,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="w-full h-full hidden md:w-[90%] md:flex md:items-center md:justify-around gap-1">
+      <div className="w-full h-full hidden md:w-[90%] md:flex md:items-center md:justify-around gap-1 transition-all duration-100">
         <div className="w-[90%] flex justify-between items-center gap-1 ">
           {addMenuItems()}
           {resumeButton()}

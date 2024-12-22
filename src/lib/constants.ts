@@ -1,14 +1,22 @@
 export const experience = {
   "02/24": {
-    company: "Aura",
-    website: "https://auranft.co/",
+    company: "GAMP (previously Aura)",
+    website: "https://gamp.gg/",
     from: "Feb 2024",
     to: "Current",
     designation: "Frontend Engineer",
     location: "Remote",
     tasks:
       "Building new features to provide users more customization and better usability. Optimizing the performance of the application by leveraging Server Side Rendering and partial rendering to provide the best user experience. Collaborating with designers and other engineers to build pixel perfect UI and come up with best possible solutions.",
-    tech: ["Next.js", "React.js", "Web3.js", "Ethers.js", "SSR", "Typescript"],
+    tech: [
+      "Next.js",
+      "Typescript",
+      "TailwindCSS",
+      "Telegram Mini App",
+      "Solidity",
+      "Embedded Wallets",
+      "Smart Contracts",
+    ],
   },
   "08/23": {
     company: "Mojoboxx",
@@ -54,6 +62,22 @@ export const experience = {
 
 export const projects = {
   "001": {
+    name: "GAMP",
+    link: "https://gamp.gg/",
+    image: "/gamp-logo.png",
+    description:
+      "Built the next gen Esports platform, offering a plethora of games. Reinventing Esports by providing a way for causal gamers to experience tournament environment. Giving exciting rewards to players with exceptional gaming skill. Re-inventing gaming. ",
+    tech: ["Next.js", "TailwindCSS", "Telegram React SDK"],
+  },
+  "002": {
+    name: "GAMP Mini App",
+    link: "https://t.me/GAMPGG_BOT",
+    image: "/mini-app-icon.jpg",
+    description:
+      "Built a Telegram mini app by porting the existing web app into Telegram, increasing distribution and providing an app like experience with web based technologies.",
+    tech: ["Next.js", "TailwindCSS", "Telegram React SDK"],
+  },
+  "003": {
     name: "Visited",
     link: "https://visited-client.vercel.app/",
     image: "/visited.png",
@@ -67,7 +91,7 @@ export const projects = {
       "TailwindCSS",
     ],
   },
-  "002": {
+  "004": {
     name: "Slack clone",
     link: "https://slack-clone-6c09b.web.app/",
     image: "/slack.png",
@@ -75,7 +99,7 @@ export const projects = {
       "A simple UI clone of Slack, with chat room functionality. Using firebase to act as a backend, and provide Google authentication. Redux for state management.",
     tech: ["React.js", "Redux", "Firebase"],
   },
-  "003": {
+  "005": {
     name: "Embifi Mock",
     link: "https://embifi-mock-project.netlify.app/",
     image: "/embifi.png",
