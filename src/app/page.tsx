@@ -1,15 +1,9 @@
-import About from "@/components/about";
-import Experience from "@/components/experience";
-import Skills from "@/components/skills";
-import Projects from "@/components/projects";
+import ScrollGrid from "@/components/scroll-grid/scroll-grid";
 
 export default function Home() {
   return (
-    <main className="h-full w-[95%] flex items-center justify-center flex-col gap-10">
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
+    <main className="min-h-full w-full p-6 flex flex-col gap-y-10 items-center justify-center ">
+      <ScrollGrid />
     </main>
   );
 }

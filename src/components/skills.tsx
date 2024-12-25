@@ -1,18 +1,17 @@
 import React from "react";
 import SkillCard from "./skill-card";
-import { Skills as SkillsType } from "@/lib/definitions";
+export const skills: Record<string, string> = {
+  NextJs: "nextjs",
+  Web3: "web3",
+  Solidity: "solidity",
+  ReactJs: "reactjs",
+  NodeJs: "nodejs",
+  Typescript: "ts",
+  TailwindCSS: "tailwindcss",
+  Python: "python",
+};
 
 const Skills = () => {
-  const skills: SkillsType = {
-    NextJs: "nextjs",
-    Web3: "web3",
-    Solidity: "solidity",
-    ReactJs: "reactjs",
-    NodeJs: "nodejs",
-    Typescript: "ts",
-    TailwindCSS: "tailwindcss",
-    Python: "python",
-  };
   return (
     <section
       id="#skills"

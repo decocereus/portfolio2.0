@@ -11,8 +11,9 @@ import { SiMongodb, SiSolidity, SiWeb3Dotjs } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { TbBrandNextjs, TbSql } from "react-icons/tb";
 import { FaPython, FaNode } from "react-icons/fa6";
+import { cn } from "@/lib/utils";
 
-const SkillCard = ({ type, label }: SkillCardProps) => {
+const SkillCard = ({ type, label, className }: SkillCardProps) => {
   const iconComponents: IconMap = {
     tailwindcss: <BiLogoTailwindCss />,
     ts: <BiLogoTypescript />,
@@ -28,7 +29,12 @@ const SkillCard = ({ type, label }: SkillCardProps) => {
   const IconComponent = iconComponents[type];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center ">
+    <div
+      className={cn(
+        "w-full flex flex-col items-center justify-center ",
+        className
+      )}
+    >
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger>

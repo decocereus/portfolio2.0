@@ -13,6 +13,7 @@ export interface ModalProps {
 export interface SkillCardProps {
   type: string;
   label: string;
+  className?: string;
 }
 
 export type IconMap = {
