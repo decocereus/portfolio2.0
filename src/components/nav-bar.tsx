@@ -58,7 +58,7 @@ const NavBar = () => {
   };
 
   return (
-    <>
+    <nav className="w-full">
       <div className="w-full h-full hidden md:w-[90%] md:flex md:items-center md:justify-around gap-1 transition-all duration-100">
         <div className="w-[90%] flex justify-between items-center gap-1 ">
           {addMenuItems()}
@@ -74,7 +74,7 @@ const NavBar = () => {
           </Modal>
         )}
       </div>
-    </>
+    </nav>
   );
 };
 

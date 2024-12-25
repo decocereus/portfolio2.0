@@ -2,14 +2,19 @@ import About from "@/components/about";
 import Experience from "@/components/experience";
 import Skills from "@/components/skills";
 import Projects from "@/components/projects";
+import ScrollGrid from "@/components/scroll-grid";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="h-full w-[95%] flex items-center justify-center flex-col gap-10">
+    <>
+      <Header />
       <About />
       <Experience />
       <Skills />
       <Projects />
-    </main>
+      <Footer />
+    </>
   );
 }
