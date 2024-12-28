@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { FC } from "react";
-import "@/app/globals.css";
+import "./styles.css";
 
 const GridImage = ({ customClass }: { customClass?: string }) => {
   return (
