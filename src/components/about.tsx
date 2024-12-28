@@ -39,7 +39,7 @@ const About = () => {
             Hi, my name is
           </p>
           <p className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl">
-            Amartya Singh
+            Amartya Singh, test commit
           </p>
           <p className="text-lg sm:text-xl md:text-2xl lg:5xl pt-2 md:pt-4">
             I am a Full Stack Engineer proficient in Next.js, Node.js and Web3
