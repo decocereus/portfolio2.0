@@ -7,11 +7,9 @@ import { IconMap } from "@/lib/definitions";
 
 const Footer = () => {
   const socials: IconMap = {
-    "https://www.linkedin.com/in/amartyasingh07/": (
-      <FaLinkedinIn color="#000" />
-    ),
-    "https://twitter.com/decocereus": <FaXTwitter color="#000" />,
-    "https://github.com/decocereus": <FaGithub color="#000" />,
+    "https://www.linkedin.com/in/amartyasingh07/": <FaLinkedinIn />,
+    "https://twitter.com/decocereus": <FaXTwitter />,
+    "https://github.com/decocereus": <FaGithub />,
   };
   const generateSocialLinks = () => {
     return (
@@ -29,11 +27,11 @@ const Footer = () => {
     );
   };
   return (
-    <footer className="w-full p-3 border border-t-[1px] border-solid">
+    <div className="sticky bottom-0 w-full p-3 border border-t-[1px] border-solid">
       <div className="w-full flex items-center justify-center gap-2">
         {generateSocialLinks()}
       </div>
-    </footer>
+    </div>
   );
 };
 
