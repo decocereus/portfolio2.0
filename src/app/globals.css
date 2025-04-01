@@ -73,7 +73,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    /* @apply bg-background text-foreground; */
     display: grid;
     place-items: center;
     min-height: 100vh;
@@ -385,12 +385,12 @@
 }
 
 @layer demo {
-  html {
+  /* html {
     scrollbar-color: red #0000;
   }
   body {
     background: canvasText;
-  }
+  } */
 
   .content-wrap {
     overflow: clip;

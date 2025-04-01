@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { FC } from "react";
-import "@/app/globals.css";
 
 const GridImage = ({ customClass }: { customClass?: string }) => {
   return (
@@ -20,67 +19,68 @@ const GridImage = ({ customClass }: { customClass?: string }) => {
 
 const ScrollGrid: FC = () => {
   return (
-    <>
-      {/* <div></div> */}
-      <section id={"special-scroll"}>
-        <div className="main-content">
-          <div className="scroll-grid">
-            <div className="scroll-item-layer">
-              <div>
-                <GridImage />
+    <div className="content-wrap">
+      <main id={"main-container"}>
+        <section id={"special-scroll"}>
+          <div className="main-content">
+            <div className="scroll-grid">
+              <div className="scroll-item-layer">
+                <div>
+                  <GridImage />
+                </div>
+                <div>
+                  <GridImage />
+                </div>
+                <div>
+                  <GridImage />
+                </div>
+                <div>
+                  <GridImage />
+                </div>
+                <div>
+                  <GridImage />
+                </div>
+                <div>
+                  <GridImage />
+                </div>
               </div>
-              <div>
-                <GridImage />
+              <div className="scroll-item-layer">
+                <div>
+                  <GridImage />
+                </div>
+                <div>
+                  <GridImage />
+                </div>
+                <div>
+                  <GridImage />
+                </div>
+                <div>
+                  <GridImage />
+                </div>
+                <div>
+                  <GridImage />
+                </div>
+                <div>
+                  <GridImage />
+                </div>
               </div>
-              <div>
-                <GridImage />
+              <div className="scroll-item-layer">
+                <div>
+                  <GridImage />
+                </div>
+                <div>
+                  <GridImage />
+                </div>
               </div>
-              <div>
-                <GridImage />
+              <div className="image-scaler">
+                <GridImage customClass="special-element w-[100%]" />
               </div>
-              <div>
-                <GridImage />
-              </div>
-              <div>
-                <GridImage />
-              </div>
-            </div>
-            <div className="scroll-item-layer">
-              <div>
-                <GridImage />
-              </div>
-              <div>
-                <GridImage />
-              </div>
-              <div>
-                <GridImage />
-              </div>
-              <div>
-                <GridImage />
-              </div>
-              <div>
-                <GridImage />
-              </div>
-              <div>
-                <GridImage />
-              </div>
-            </div>
-            <div className="scroll-item-layer">
-              <div>
-                <GridImage />
-              </div>
-              <div>
-                <GridImage />
-              </div>
-            </div>
-            <div className="image-scaler">
-              <GridImage customClass="special-element w-[100%]" />
             </div>
           </div>
-        </div>
-      </section>
-      <section id={"spacer"} />
-    </>
+        </section>
+        <section id={"spacer"} />
+      </main>
+    </div>
   );
 };
 

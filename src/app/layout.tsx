@@ -39,13 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("dark", roboto.variable)}>
-        <div className="content-wrap">
-          <main id={"main-container"}>
-            <ScrollGrid />
-            {children}
-          </main>
-        </div>
+      <body className={cn("", roboto.variable)}>
+        <ScrollGrid />
+        {children}
       </body>
     </html>
   );
