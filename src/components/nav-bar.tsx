@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { GrDocumentText } from "react-icons/gr";
 import { HiOutlineMenu } from "react-icons/hi";
 import Modal from "./modal";
+import Link from "next/link";
 
 type NavLink = { [key: string]: string };
 
@@ -43,8 +44,8 @@ const NavBar = () => {
 
   const resumeButton = () => {
     return (
-      <a
-        href="https://drive.google.com/file/d/1-4h2TFpg1-4fqqkKHYZ4EDp8BO3wZ6yO/view?usp=sharing"
+      <Link
+        href="https://drive.google.com/file/d/172ZNhmd03sRLCVdggWSEtRHPhjQOAgcU/view?usp=sharing"
         target="_blank"
         rel="noreferrer noopener"
       >
@@ -53,7 +54,7 @@ const NavBar = () => {
           <GrDocumentText className="mr-1" />
           <span>{"   />"}</span>
         </Button>
-      </a>
+      </Link>
     );
   };
 

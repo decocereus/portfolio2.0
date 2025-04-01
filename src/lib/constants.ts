@@ -4,7 +4,7 @@ export const experience = {
     website: "https://gamp.gg/",
     from: "Feb 2024",
     to: "Current",
-    designation: "Frontend Engineer",
+    designation: "Frontend Engineer 2",
     location: "Remote",
     tasks:
       "Building new features to provide users more customization and better usability. Optimizing the performance of the application by leveraging Server Side Rendering and partial rendering to provide the best user experience. Collaborating with designers and other engineers to build pixel perfect UI and come up with best possible solutions.",
@@ -70,14 +70,30 @@ export const projects = {
     tech: ["Next.js", "TailwindCSS", "Telegram React SDK"],
   },
   "002": {
-    name: "GAMP Mini App",
-    link: "https://t.me/GAMPGG_BOT",
-    image: "/mini-app-icon.jpg",
+    name: "Git Receipts",
+    link: "https://gitreceipts.vercel.app/",
+    image: "/git-receipt.png",
     description:
-      "Built a Telegram mini app by porting the existing web app into Telegram, increasing distribution and providing an app like experience with web based technologies.",
-    tech: ["Next.js", "TailwindCSS", "Telegram React SDK"],
+      "Built a github contribution generator which fetches data from Github after user is authenticated via NextAuth. Generates a comprehensive contribution chart served in a receipt style.",
+    tech: ["Next.js", "TailwindCSS", "GraphQL", "OctoBot"],
   },
   "003": {
+    name: "Resume Builder",
+    link: "https://easy-resumes.vercel.app/",
+    image: "/resume-builder.png",
+    description:
+      "Generate your own resume in one of my favourite resume templates.",
+    tech: ["Next.js", "TailwindCSS", "PDF Generator"],
+  },
+  "004": {
+    name: "Fitness Tracker",
+    link: "https://gamp-fitness.vercel.app/",
+    image: "/fitness.png",
+    description:
+      "A simple Fitness tracker with an option to start a challenge and compete with others on a leaderboard",
+    tech: ["Next.js", "TailwindCSS", "PostgresSQL", "Server Routes"],
+  },
+  "005": {
     name: "Visited",
     link: "https://visited-client.vercel.app/",
     image: "/visited.png",
@@ -90,21 +106,5 @@ export const projects = {
       "Vercel Postgres",
       "TailwindCSS",
     ],
-  },
-  "004": {
-    name: "Slack clone",
-    link: "https://slack-clone-6c09b.web.app/",
-    image: "/slack.png",
-    description:
-      "A simple UI clone of Slack, with chat room functionality. Using firebase to act as a backend, and provide Google authentication. Redux for state management.",
-    tech: ["React.js", "Redux", "Firebase"],
-  },
-  "005": {
-    name: "Embifi Mock",
-    link: "https://embifi-mock-project.netlify.app/",
-    image: "/embifi.png",
-    description:
-      "A mock web app which lets the user fill out a loan application from the comfort of their home. Authentication is maintained by using JWT tokens.",
-    tech: ["React.js", "Node.js", "PostgreSQL"],
   },
 };
