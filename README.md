@@ -1,8 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio 2.0
 
-## Getting Started
+A modern, minimalist portfolio website built with Next.js 14, TypeScript, and Tailwind CSS. View live at [your-portfolio-url].
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Dark Mode**: Sleek dark theme for better viewing experience
+- **Performance Optimized**: Fast loading times and optimal performance
+- **Clean UI**: Minimalist and professional design
+- **SEO Friendly**: Optimized for search engines
+
+## 🛠️ Tech Stack
+
+- [Next.js 14](https://nextjs.org/) - React framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Lucide Icons](https://lucide.dev/) - Icons
+
+## 🚦 Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/decocereus/portfolio2.0.git
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +44,41 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+├── src/
+│   ├── app/             # App router pages
+│   ├── components/      # React components
+│   ├── lib/            # Utilities and constants
+│   └── styles/         # Global styles
+├── public/             # Static assets
+└── tailwind.config.js  # Tailwind configuration
+```
 
-## Learn More
+## 🎨 Customization
 
-To learn more about Next.js, take a look at the following resources:
+1. Update the constants in `src/lib/constants.ts` with your information
+2. Modify the components in `src/components/` to match your needs
+3. Add your own projects and experience
+4. Customize the styling by modifying Tailwind classes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/decocereus/portfolio2.0/issues).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 👨‍💻 Author
+
+Amartya Singh
+
+- GitHub: [@decocereus](https://github.com/decocereus)
+- LinkedIn: [Amartya Singh](https://www.linkedin.com/in/amartyasingh07/)
+- Twitter: [@decocereus](https://x.com/decocereus)

@@ -1,35 +1,44 @@
-import React from "react";
-import { experience } from "@/lib/constants";
-import ExperienceCard from "./experience-card";
+import { EXPERIENCE } from "@/lib/constants";
+import { Timeline, TimelineItem } from "./timeline";
+import Link from "next/link";
 
 const Experience = () => {
   return (
-    <section
-      id="#experience"
-      className="w-full md:w-[95%] flex flex-col items-center justify-between p-2 gap-10"
-    >
-      <p className="w-full text-foreground text-md sm:text-lg my-1">
-        {"<Experience />"}
-      </p>
-      <div>
-        <ol className="group/list w-full flex flex-col items-center">
-          {Object.entries(experience).map(([period, exp], idx) => {
-            return (
-              <ExperienceCard
-                key={period}
-                company={exp.company}
-                website={exp.website}
-                from={exp.from}
-                to={exp.to}
-                designation={exp.designation}
-                location={exp.location}
-                tasks={exp.tasks}
-                tech={exp.tech}
-              />
-            );
-          })}
-        </ol>
-      </div>
+    <section id="experience" className="w-full max-w-3xl mx-auto py-12">
+      <h2 className="text-2xl font-medium mb-12 text-foreground">Experience</h2>
+
+      <Timeline>
+        {Object.entries(EXPERIENCE).map(([period, exp], idx) => (
+          <TimelineItem key={period} date={`${exp.from} - ${exp.to}`}>
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg font-medium text-foreground">
+                  {exp.designation}
+                </h3>
+                <Link
+                  href={exp.website}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {exp.company}
+                </Link>
+              </div>
+
+              <p className="text-sm text-muted-foreground">{exp.tasks}</p>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                {exp.tech.map((tech, idx) => (
+                  <span key={tech} className="text-xs text-muted-foreground">
+                    {tech}
+                    {idx < exp.tech.length - 1 ? " · " : ""}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </TimelineItem>
+        ))}
+      </Timeline>
     </section>
   );
 };

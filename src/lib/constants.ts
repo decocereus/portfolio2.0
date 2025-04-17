@@ -1,4 +1,4 @@
-export const experience = {
+export const EXPERIENCE = {
   "02/24": {
     company: "GAMP (previously Aura)",
     website: "https://gamp.gg/",
@@ -60,22 +60,14 @@ export const experience = {
   },
 };
 
-export const projects = {
+export const PROJECTS = {
   "001": {
-    name: "GAMP",
-    link: "https://gamp.gg/",
-    image: "/gamp-logo.png",
-    description:
-      "Built the next gen Esports platform, offering a plethora of games. Reinventing Esports by providing a way for causal gamers to experience tournament environment. Giving exciting rewards to players with exceptional gaming skill. Re-inventing gaming. ",
-    tech: ["Next.js", "TailwindCSS", "Telegram React SDK"],
-  },
-  "002": {
     name: "Git Receipts",
     link: "https://gitreceipts.vercel.app/",
     image: "/git-receipt.png",
     description:
       "Built a github contribution generator which fetches data from Github after user is authenticated via NextAuth. Generates a comprehensive contribution chart served in a receipt style.",
-    tech: ["Next.js", "TailwindCSS", "GraphQL", "OctoBot"],
+    tech: ["Next.js", "Typescript", "GraphQL", "OctoBot", "NextAuth"],
   },
   "003": {
     name: "Resume Builder",
@@ -83,7 +75,7 @@ export const projects = {
     image: "/resume-builder.png",
     description:
       "Generate your own resume in one of my favourite resume templates.",
-    tech: ["Next.js", "TailwindCSS", "PDF Generator"],
+    tech: ["Next.js", "Typescript", "PDF Generator"],
   },
   "004": {
     name: "Fitness Tracker",
@@ -91,7 +83,7 @@ export const projects = {
     image: "/fitness.png",
     description:
       "A simple Fitness tracker with an option to start a challenge and compete with others on a leaderboard",
-    tech: ["Next.js", "TailwindCSS", "PostgresSQL", "Server Routes"],
+    tech: ["Next.js", "Typescript", "PostgresSQL", "Server Routes"],
   },
   "005": {
     name: "Visited",
@@ -99,12 +91,25 @@ export const projects = {
     image: "/visited.png",
     description:
       "A simple web app which works in conjunction with a chrome extension to track and display public URLs visited by the user. A Google Auth session is shared between the web app and the chrome extension.",
-    tech: [
-      "Next.js",
-      "Typescript",
-      "Node.js",
-      "Vercel Postgres",
-      "TailwindCSS",
-    ],
+    tech: ["Next.js", "Typescript", "Node.js", "Vercel Postgres"],
   },
 };
+
+export const SOCIALS = [
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/amartyasingh07/" },
+  { name: "Twitter", url: "https://twitter.com/decocereus" },
+  { name: "GitHub", url: "https://github.com/decocereus" },
+];
+
+export const RESUME_URL =
+  "https://drive.google.com/file/d/172ZNhmd03sRLCVdggWSEtRHPhjQOAgcU/view?usp=sharing";
+
+export const SKILLS = [
+  "Next.js",
+  "React.js",
+  "TypeScript",
+  "Node.js",
+  "Blockchain",
+  "Solidity",
+  "Python",
+];
