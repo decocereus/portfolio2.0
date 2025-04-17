@@ -4,7 +4,10 @@ import Link from "next/link";
 
 const Experience = () => {
   return (
-    <section id="experience" className="w-full max-w-3xl mx-auto py-12">
+    <section
+      id="experience"
+      className="w-full max-w-3xl mx-auto py-12 animate-fadeIn transition-all duration-500"
+    >
       <h2 className="text-2xl font-medium mb-12 text-foreground">Experience</h2>
 
       <Timeline>

@@ -113,3 +113,38 @@ export const SKILLS = [
   "Solidity",
   "Python",
 ];
+
+export const SKILL_TREE = {
+  frontend: {
+    name: "Frontend",
+    skills: [
+      { name: "Next.js", level: "expert" },
+      { name: "React.js", level: "expert" },
+      { name: "TailwindCSS", level: "expert" },
+    ],
+  },
+  backend: {
+    name: "Backend",
+    skills: [
+      { name: "Node.js", level: "advanced" },
+      { name: "Express.js", level: "advanced" },
+      { name: "PostgreSQL", level: "advanced" },
+    ],
+  },
+  web3: {
+    name: "Web3",
+    skills: [
+      { name: "Solidity", level: "intermediate" },
+      { name: "Smart Contracts", level: "intermediate" },
+      { name: "Blockchain", level: "intermediate" },
+    ],
+  },
+  mobile: {
+    name: "Mobile",
+    skills: [
+      { name: "Telegram Mini App", level: "intermediate" },
+      { name: "SwiftUI", level: "intermediate" },
+      { name: "React Native", level: "beginner" },
+    ],
+  },
+};

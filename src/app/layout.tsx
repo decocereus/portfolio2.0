@@ -1,5 +1,5 @@
 import type React from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
@@ -11,7 +11,14 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://decocereus.dev"),
   title: "Amartya Singh | Full Stack Engineer",
   description:
     "Personal Portfolio of Amartya Singh - Full Stack Engineer proficient in Next.js, Node.js and Web3",
@@ -28,7 +35,7 @@ export const metadata: Metadata = {
   creator: "Amartya Singh",
   publisher: "Amartya Singh",
   alternates: {
-    canonical: "/",
+    canonical: "https://decocereus.dev",
   },
   openGraph: {
     title: "Amartya Singh | Full Stack Engineer",
@@ -79,15 +86,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
 };
 
 export default function RootLayout({
@@ -110,7 +108,7 @@ export default function RootLayout({
               href={RESUME_URL}
               target="_blank"
               rel="noreferrer"
-              className="text-sm py-2 rounded-lg text-foreground hover:bg-accent transition-colors duration-200"
+              className="text-sm py-2 rounded-lg text-foreground hover:bg-accent px-4 transition-colors duration-200"
             >
               View Resume
             </Link>
