@@ -15,8 +15,55 @@ export const metadata: Metadata = {
   title: "Amartya Singh | Full Stack Engineer",
   description:
     "Personal Portfolio of Amartya Singh - Full Stack Engineer proficient in Next.js, Node.js and Web3",
+  keywords: [
+    "Full Stack Engineer",
+    "Next.js",
+    "Node.js",
+    "Web3",
+    "React",
+    "TypeScript",
+    "Portfolio",
+  ],
+  authors: [{ name: "Amartya Singh" }],
+  creator: "Amartya Singh",
+  publisher: "Amartya Singh",
   alternates: {
     canonical: "/",
+  },
+  openGraph: {
+    title: "Amartya Singh | Full Stack Engineer",
+    description:
+      "Personal Portfolio of Amartya Singh - Full Stack Engineer proficient in Next.js, Node.js and Web3",
+    url: "/",
+    siteName: "Amartya Singh Portfolio",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Amartya Singh Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amartya Singh | Full Stack Engineer",
+    description:
+      "Personal Portfolio of Amartya Singh - Full Stack Engineer proficient in Next.js, Node.js and Web3",
+    images: ["/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: [
@@ -32,6 +79,15 @@ export const metadata: Metadata = {
       },
     ],
   },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
 export default function RootLayout({
