@@ -1,9 +1,25 @@
 export const EXPERIENCE = {
+  "04/25": {
+    company: "Avail",
+    website: "https://www.availproject.org/",
+    from: "Apr 2025",
+    to: "Current",
+    designation: "Frontend Engineer",
+    location: "Remote",
+    tasks: "Helping blockchains prevail",
+    tech: [
+      "Next.js",
+      "Typescript",
+      "TailwindCSS",
+      "Solidity",
+      "Smart Contracts",
+    ],
+  },
   "02/24": {
     company: "GAMP (previously Aura)",
     website: "https://gamp.gg/",
     from: "Feb 2024",
-    to: "Current",
+    to: "Apr 2025",
     designation: "Frontend Engineer 2",
     location: "Remote",
     tasks:
