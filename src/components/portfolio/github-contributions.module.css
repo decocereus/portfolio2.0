@@ -27,11 +27,13 @@
 
 .profileLink {
   display: inline-flex;
+  flex: none;
   gap: 5px;
   align-items: center;
   min-height: 44px;
   font-size: 0.8125rem;
   color: var(--prototype-muted);
+  white-space: nowrap;
   text-decoration: none;
   transition: color 150ms ease;
 }

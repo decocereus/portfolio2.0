@@ -31,13 +31,8 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-The site works without environment variables. To load the latest GitHub
-contribution data instead of the committed fallback snapshot, add a GitHub
-token with permission to read public profile data:
-
-```bash
-GITHUB_CONTRIBUTIONS_TOKEN=github_pat_...
-```
+The site works without environment variables. GitHub contribution data is fetched
+on the Next.js server from the public profile calendar, without an access token.
 
 ## Content and data
 
@@ -46,8 +41,14 @@ The factual source behind that copy is maintained in
 [`docs/about-amartya.md`](./docs/about-amartya.md); do not strengthen claims
 when adapting it.
 
-GitHub contributions are refreshed daily when a token is available and fall
-back to a bundled snapshot if the API cannot be reached. Codex activity is
+GitHub contributions use Next.js's one-hour fetch cache. The next visit after
+expiry triggers revalidation, so this does not require a cron job or a rebuild.
+There is no bundled GitHub snapshot. If data cannot be loaded or parsed, the
+section shows an unavailable message and a profile link. The parser reads GitHub's
+public HTML calendar, not a versioned API; changes to that markup may require an
+update. Only publicly visible contribution activity is included.
+
+Codex activity is
 loaded hourly from a public aggregate and similarly falls back to
 [`src/lib/codex-usage-snapshot.json`](./src/lib/codex-usage-snapshot.json).
 The aggregate contains counts and token totals only—never prompts, titles, or

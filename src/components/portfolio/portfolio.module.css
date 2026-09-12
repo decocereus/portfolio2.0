@@ -280,6 +280,32 @@
   gap: 9px;
 }
 
+.caseStudy summary {
+  align-content: center;
+  min-height: 44px;
+  font-size: 0.8125rem;
+  color: var(--prototype-text);
+  cursor: pointer;
+}
+
+.caseStudy summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.caseStudyContent {
+  display: grid;
+  gap: 18px;
+  padding-block: 12px;
+}
+
+.caseStudyContent h4 {
+  margin-block-end: 5px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--prototype-text);
+}
+
 .workList .workScope {
   font-size: 0.6875rem;
   font-weight: 600;

@@ -1,5 +1,6 @@
 export const SITE = {
-  description: "building and shipping everyday",
+  description:
+    "Amartya Singh, product engineer. Backend systems, product interfaces, and independent tools.",
   name: "Amartya Singh",
   title: "decocereus",
   url: "https://www.decocereus.com",

@@ -3,7 +3,7 @@ export const PORTFOLIO_BIO = [
     id: "what-i-enjoy",
     segments: [
       {
-        text: "I am an engineer who enjoys building different products because the people, constraints and problems are rarely the same. So far, that has taken me from a gaming social app and airport operations to cross-chain transactions, private trading, writing tools, and small utilities I wanted for myself.",
+        text: "I'm an engineer who likes taking a product from an idea to something people can use. My work spans backend systems, interfaces, and tools I've built for myself.",
       },
     ],
   },
@@ -17,15 +17,7 @@ export const PORTFOLIO_BIO = [
         text: "Avail",
       },
       {
-        text: ", that currently means working on Nightshade and ",
-      },
-      {
-        href: "https://widgets.availproject.org/",
-        preview: "nexus",
-        text: "Nexus",
-      },
-      {
-        text: ". Nightshade is the privacy layer behind ",
+        text: ", I own the backend service behind ",
       },
       {
         href: "https://www.shieldtx.xyz/",
@@ -33,7 +25,15 @@ export const PORTFOLIO_BIO = [
         text: "ShieldTX",
       },
       {
-        text: ". I own the backend service that keeps each private trade moving, from a request in the app to the completed trade. On Nexus, I helped take the product from its first SDK to installable components for bridging, swapping, and moving assets across chains, just to name a few.",
+        text: ", coordinating private trades from a request in the app through to completion. I also built the initial SDK and installable UI for ",
+      },
+      {
+        href: "https://widgets.availproject.org/",
+        preview: "nexus",
+        text: "Nexus",
+      },
+      {
+        text: ", which helps applications move assets across chains.",
       },
     ],
   },
@@ -232,27 +232,65 @@ export const PORTFOLIO_GITHUB = {
 
 export const PORTFOLIO_WORK = [
   {
-    href: "https://www.usevolt.app/",
     name: "Volt",
-    scope: "Product, design, engineering",
+    scope: "Product, design, engineering · Archived",
     storeHref:
       "https://chromewebstore.google.com/detail/volt/mccjgabeopbafjehgbhmjoipddgakafl",
+    storeLabel: "Chrome Web Store listing",
     summary:
-      "An AI ghostwriter for X that learned how you write. I designed, built, and launched the whole product.",
+      "An AI writing tool I built to draft X posts in my own voice, then launched as a product. I owned the design and engineering, including the web app and browser extension. The product is retired and its backend is offline.",
   },
   {
+    caseStudy: {
+      href: "https://www.shieldtx.xyz/",
+      label: "Read the ShieldTX case study",
+      linkLabel: "Explore ShieldTX",
+      sections: [
+        {
+          body: "A private trade depends on several services agreeing on what has happened. Keeping that coordination in the frontend made the app responsible for too much, especially when a request was interrupted or an external service responded late.",
+          title: "The problem",
+        },
+        {
+          body: "I proposed moving third-party coordination behind a dedicated backend boundary, designed the layer, and built its first implementation. That gave the frontend one API for trading workflows while the backend coordinated the work between services.",
+          title: "The decision",
+        },
+        {
+          body: "I lead the backend work and build it with the team. My ongoing work covers trading workflows, live market connections, recovery, and tools that help us understand interrupted operations. Testing and user feedback feed back into how those workflows behave.",
+          title: "What I own today",
+        },
+      ],
+    },
     href: "https://www.shieldtx.xyz/",
     name: "ShieldTX",
     scope: "Backend systems",
     summary:
-      "Privacy-preserving perpetuals trading on Hyperliquid. I own the backend that coordinates trading workflows, live market connections, third-party services, and the frontend API.",
+      "Private trading on Hyperliquid. My work focuses on coordinating services and recovering interrupted trades, with tools to understand what happened and what needs attention.",
   },
   {
+    caseStudy: {
+      href: "https://widgets.availproject.org/",
+      label: "Read the Nexus case study",
+      linkLabel: "Explore Nexus Elements",
+      sections: [
+        {
+          body: "Applications needed to bring balances across chains into one flow. I built the initial SDK and UI, but packaging them together limited how teams could customize the interface and added unnecessary package weight.",
+          title: "The problem",
+        },
+        {
+          body: "I separated the headless SDK from the UI and rebuilt the interface as shadcn components installed through a registry. The SDK handled the transaction logic; integration teams could edit the UI source in their own projects.",
+          title: "The decision",
+        },
+        {
+          body: "I built and maintained the Elements distribution site and registry integration, with bridge, swap, and swap-and-execute flows. Teams could use the SDK with their own interface or start with the installable components and adapt them.",
+          title: "What shipped",
+        },
+      ],
+    },
     href: "https://widgets.availproject.org/",
     name: "Nexus",
     scope: "SDK and UI",
     summary:
-      "Brings balances held across chains together. I built the first SDK and later the installable UI for bridge, swap, and transaction flows.",
+      "Brings balances held across chains together. I separated the UI from the SDK so integration teams could install, own, and customize the components in their own codebases.",
   },
   {
     href: "https://xtract.decocereus.com/",
@@ -274,13 +312,13 @@ export const PORTFOLIO_WORK = [
 
 export const PORTFOLIO_CODEX = {
   description:
-    "I use Codex every day and hand most of the heavy lifting to subagents. Here’s the running tally.",
+    "AI is part of how I build. I use agents to explore ideas, write code, and review changes so I can move quickly from idea to working software.",
   title: "Working with agents",
 } as const;
 
 export const PORTFOLIO_CONTACT = {
   cta: {
-    body: "Got something worth talking about? DM me on X or send an email.",
+    body: "Have a role or project in mind? Email me or DM me on X.",
     button: "Get in touch",
     emailLabel: "Send me an email",
     title: "Let's talk",

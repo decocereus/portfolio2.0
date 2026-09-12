@@ -22,7 +22,7 @@ export function Portfolio({
   contributions,
 }: {
   codexUsage: CodexUsage;
-  contributions: GitHubContributions;
+  contributions: GitHubContributions | null;
 }) {
   const [theme, setTheme] = useState<"dark" | "light">("light");
 
@@ -63,12 +63,20 @@ export function Portfolio({
               <li key={project.name}>
                 <article>
                   <h3>
-                    <Link href={project.href} rel="noreferrer" target="_blank">
-                      <span>{project.name}</span>
-                      <span aria-hidden="true" className={styles.arrow}>
-                        ↗
-                      </span>
-                    </Link>
+                    {"href" in project ? (
+                      <Link
+                        href={project.href}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <span>{project.name}</span>
+                        <span aria-hidden="true" className={styles.arrow}>
+                          ↗
+                        </span>
+                      </Link>
+                    ) : (
+                      project.name
+                    )}
                   </h3>
                   <div className={styles.workDetails}>
                     <p className={styles.workScope}>{project.scope}</p>
@@ -76,19 +84,40 @@ export function Portfolio({
                       {project.summary}
                       {"storeHref" in project ? (
                         <>
-                          {" Verified on "}
+                          {" "}
                           <Link
                             className={styles.summaryLink}
                             href={project.storeHref}
                             rel="noreferrer"
                             target="_blank"
                           >
-                            chrome store
+                            {project.storeLabel}
                           </Link>
                           .
                         </>
                       ) : null}
                     </p>
+                    {"caseStudy" in project ? (
+                      <details className={styles.caseStudy}>
+                        <summary>{project.caseStudy.label}</summary>
+                        <div className={styles.caseStudyContent}>
+                          {project.caseStudy.sections.map((section) => (
+                            <section key={section.title}>
+                              <h4>{section.title}</h4>
+                              <p>{section.body}</p>
+                            </section>
+                          ))}
+                          <Link
+                            className={styles.sourceLink}
+                            href={project.caseStudy.href}
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            {project.caseStudy.linkLabel} ↗
+                          </Link>
+                        </div>
+                      </details>
+                    ) : null}
                     {"sourceHref" in project ? (
                       <Link
                         className={styles.sourceLink}

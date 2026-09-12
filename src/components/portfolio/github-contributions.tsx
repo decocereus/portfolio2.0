@@ -11,23 +11,18 @@ function contributionLabel(count: number, date: string) {
 export function GitHubContributionGraph({
   contributions,
 }: {
-  contributions: GitHubContributions;
+  contributions: GitHubContributions | null;
 }) {
-  const firstDay = contributions.days.at(0)?.date;
-  const lastDay = contributions.days.at(-1)?.date;
-  const range =
-    firstDay && lastDay ? `${firstDay} to ${lastDay}` : "the last year";
-  const summary = `${contributions.totalContributions.toLocaleString("en-US")} contributions from ${range}`;
+  const summary = contributions
+    ? `${contributions.totalContributions.toLocaleString("en-US")} contributions in the last year`
+    : "Contribution activity is temporarily unavailable.";
 
   return (
     <section aria-labelledby="github-title" className={styles.section}>
       <div className={styles.heading}>
         <div>
           <h2 id="github-title">On GitHub</h2>
-          <p>
-            {contributions.totalContributions.toLocaleString("en-US")}{" "}
-            contributions in the last year
-          </p>
+          <p>{summary}</p>
         </div>
         <Link
           className={styles.profileLink}
@@ -38,27 +33,31 @@ export function GitHubContributionGraph({
           View profile <span aria-hidden="true">↗</span>
         </Link>
       </div>
-      <div className={styles.scroller}>
-        <div aria-label={summary} className={styles.graph} role="img">
-          {contributions.days.map((day) => (
-            <time
-              aria-hidden="true"
-              className={styles.day}
-              data-level={day.level}
-              dateTime={day.date}
-              key={day.date}
-              title={contributionLabel(day.count, day.date)}
-            />
-          ))}
-        </div>
-      </div>
-      <div aria-hidden="true" className={styles.legend}>
-        <span>Less</span>
-        {[0, 1, 2, 3, 4].map((level) => (
-          <span className={styles.day} data-level={level} key={level} />
-        ))}
-        <span>More</span>
-      </div>
+      {contributions ? (
+        <>
+          <div className={styles.scroller}>
+            <div aria-label={summary} className={styles.graph} role="img">
+              {contributions.days.map((day) => (
+                <time
+                  aria-hidden="true"
+                  className={styles.day}
+                  data-level={day.level}
+                  dateTime={day.date}
+                  key={day.date}
+                  title={contributionLabel(day.count, day.date)}
+                />
+              ))}
+            </div>
+          </div>
+          <div aria-hidden="true" className={styles.legend}>
+            <span>Less</span>
+            {[0, 1, 2, 3, 4].map((level) => (
+              <span className={styles.day} data-level={level} key={level} />
+            ))}
+            <span>More</span>
+          </div>
+        </>
+      ) : null}
     </section>
   );
 }
